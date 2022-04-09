@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Car Rental System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #252525;
+      background-color: #EDEDED;
+      
+  }
+  
+  
+  
+  .picklctn{
+    display: flex;
+    flex-direction: column;
+    margin-top: -150px;
+    margin-left: 100px;
+    
+  }
+
+  .returnlctn{
+    display: flex;
+    flex-direction: column;
+    margin-top: -150px;
+  }
+
+  .birthday{
+    display: flex;
+    flex-direction: column;
+    margin-top: -150px;
+    
+    
+  }
+
+  .birthday2{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  input[type="date"]{
+    background-color: white;
+    border: none;
+    font-family: Montserrat, sans-serif;
+    height: 35px;
+    border-radius: 0.2em;
+    color: #171717;
+
+  }
+
+
+ .img{
+    background-image: url("carbg.jpg");
+    width: 100%;
+    height: 610px;
+  
+    position : relative;
+    display:flex;
+    justify-content: center;
+    
+  }
+  
+  
+
+  .navbar {
+    
+      margin-bottom: 0;
+      background-color: rgb(53, 57, 65,0);
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+
+  .navbar li a, .navbar .navbar-brand {
+      color: #DA0037 !important;
+      font-weight: bold;
+      
+  }
+
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #EDEDED !important;
+      background-color: #DA0037 !important;
+      
+  }
+  
+
+.containers {
+  right: 150px;
+  width: 1518px;
+  height: 210px;
+  margin:-150px;
+  position: absolute;
+  
+  font-family: Montserrat, sans-serif;
+  color:#171717;
+  
+  
+    padding: 20px;
+}
+
+
+
+select {
+   -webkit-appearance:none;
+   -moz-appearance:none;
+   -ms-appearance:none;
+   appearance:none;
+   outline:0;
+   box-shadow:none;
+   border:0!important;
+   background: white;
+   background-image: none;
+   flex: 1;
+   padding: 0 .5em;
+   color:#171717;
+   cursor:pointer;
+   font-size: 1em;
+   font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+   display: none;
+}
+.select {
+   position: relative;
+   display: flex;
+   width: 10em;
+   height: 2.5em;
+   line-height: 2.7;
+   background: #EDEDED;
+   overflow: hidden;
+   border-radius: .25em;
+}
+.select::after {
+   content: '\25BC';
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0 1em;
+   background: #DA0037;
+   color: white;
+   cursor:pointer;
+   pointer-events:none;
+   transition:.25s all ease;
+}
+.select:hover::after {
+   color: #171717;
+}
+
+
+.btn {
+  background-color: #DA0037;
+  color: #EDEDED;
+  
+  height: 36px;
+  border: none;
+  margin: 50px;
+  right: -17px;
+  position: absolute;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+  margin-top: -118px;
+}
+
+.btn:hover {
+  opacity: 1;
+  background-color: #171717;
+  color: #EDEDED;
+}
+
+.container2{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+  gap: 1rem;
+  margin-top: 100px;
+  margin-left:auto; margin-right:auto;
+
+  
+}
+
+.containers .picklctn{
+  width: 15%;
+    float: left;
+    padding: 20px;
+    border: 2px;
+}
+
+.containers .returnlctn{
+  width: 15%;
+    float: left;
+    padding: 20px;
+    border: 2px;
+}
+
+#message{
+  background-color:rgb(160, 149, 152, 0);
+  width: 300px;
+  height: 200px;
+  margin-left: 15px;
+  
+  background-image: url("tesla.png");
+}
+
+#on-message{
+  background-color: rgb(218, 0, 55,0);
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  font-family: 'Impact','sans-serif';
+  font-weight: 900;
+  color: #EDEDED;
+  margin-top: 75px;
+}
+
+#seeall{
+  position: absolute;
+  right: 140px;
+  margin:-30px;
+  margin-top: 140px;
+  color: #252525;
+}
+
+.containers .birthday{
+  width: 15%;
+    float: left;
+    padding: 20px;
+    border: 2px;
+    
+}
+
+
+.abcd{
+  
+ margin-top: -100px;
+  height: 27.8%;
+  width: 86%;
+  position: absolute;
+  left: 100px;
+  background-color:#EDEDED;
+  box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+}
+
+#in-message{
+  background-color: rgb(218, 0, 55,0.9);
+  margin-left: -15px;
+  margin-top: -75px;
+  height: 100%;
+  width: 107%;
+}
+
+.container2 .box{
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+  margin-top: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.container2 .box .boximg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+#carss{
+  position: absolute;
+  right: 1400px;
+  margin:-40px;
+  margin-top: 140px;
+}
+
+
+#arrow{
+  position: absolute;
+  right: 100px;
+  margin:-30px;
+  width: 25px;
+  margin-top: 140px;
+}
+
+.rent{
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+   
+}
+
+.buttonbottom{
+  background-color: #444444;
+  color: #EDEDED;
+  
+  border: none;
+  border-radius: 5px;
+  margin-top: -20px;
+  right: 355px;
+  position: absolute;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+}
+
+
+
+#white-arrow{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+.buttonbottom:hover{
+  opacity: 1;
+  background-color: #171717;
+  color: #EDEDED;
+}
+
+#search-car{
+   display: flex;
+   text-align: center;
+   
+}
+
+
+ 
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand"><span class="glyphicon glyphicon-globe"></span> CRS</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="cars.html">VEHICLES</a></li>
+        <li><a href="offices.html">OFFICES</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="img">
+  
+
+
+
+</div>
+
+  <div class="abcd">
+    <div id="message">
+      <div id="in-message">
+        <div id="on-message">
+          <h2 id="search-car"> Let's Search Your Favourite Car And Rent It.</h2>
+          <img src="whitearrow.png" id="white-arrow">
+        </div>
+        </div>
+      </div>
+    
+    <form>
+    <div class="rent">
+    <div class="picklctn">
+      <label for="cars">Pick Up Location</label>
+      <div class="select">
+      <select  name="cars" id="cars">
+        <option value="volvo">Antalya</option>
+        <option value="saab">Ankara</option>
+        <option value="mercedes">İstanbul</option>
+        <option value="audi">İzmir</option>
+      </select>
+      </div>
+    </div>
+    <div class="returnlctn">
+    <label for="cars">Return Location</label>
+    <div class="select">
+<select name="cars" id="cars">
+  <option value="volvo">Antalya</option>
+  <option value="saab">Ankara</option>
+  <option value="mercedes">İstanbul</option>
+  <option value="audi">İzmir</option>
+</select>
+</div>
+</div>
+
+<div class="birthday">
+    <label for="birthday">Date From </label>
+    <input type="date" id="birthday" name="birthday">
+</div>
+
+<div class="birthday">
+    <label for="birthday2">Date To</label>
+    <input type="date" id="birthday2" name="birthday2">
+</div>
+    <button type="submit" class="btn"><b>Search</b></button>
+  </div>
+</div>
+</div>
+  </form>
+  
+</div>
+</div>
+<div id="contact" class="container-fluid bg-grey">
+  
+  <h2 id="carss">CARS</h2>
+  
+    <a href="cars.html">
+    <h3 id="seeall">See all</h3>
+    <img id="arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAARNJREFUSEvFl10NwkAQhL86QAooQAIWQAHgAByAA3AADsABOAAH4IBMcpc0pL3ef+elT823072d2zaMpGYkLi7wBFgDZ+CVu0AX+AIsgA+wA4454S7wDZi3YCpkZQpJriEELJjcC64ikhQKtrATsE1xHwtWATpwcq+WBCsFbGEH4z4IngMs4MO419NLucAWprHb+5Bzg8VUz9V7Z+iUANuxc4ZOKbD92r2hUxpsD97sv+81wE9gWht8BZZdCVfK8RfYAIrWTpUA343LquOki0MROqhcjnWA1MuqkamIVFgEKcXx27isei1q/5JLbSRRCnWsMVEvq64+vWEQY9lnvR0Mg9xgLfQ2faou9DFGvN8Z7d/pB+SpRh9wM0oeAAAAAElFTkSuQmCC"/>
+    </a>
+  
+  <div class="container2">
+    
+    
+    <div class="box">
+      <div class="boximg">
+        <img src="f-citroen-c3.png" id="araba1">
+      </div>
+      <p>2018</p>
+      <h3>Citroen C3</h3>
+      <h3>80$/Month</h3>
+      <p>For Rent</p>
+    </div>
+    
+    <div class="box">
+      <div class="boximg">
+        <img src="b-fiat-egea-hb.png" id="araba1">
+      </div>
+      <p>2019</p>
+      <h3>Fiat Egea</h3>
+      <h3>70$/Month</h3>
+      <p>For Rent</p>
+    </div>
+
+    <div class="box">
+      <div class="boximg">
+        <img src="f-citroen-c3.png" id="araba1">
+      </div>
+      <p>2016</p>
+      <h3>Citroen C3</h3>
+      <h3>100$/Month</h3>
+      <p>For Rent</p>
+    </div>
+
+    
+
+    </div>
+    
+ 
+   <br>
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p><span class="glyphicon glyphicon-map-marker"></span> Antalya, Turkey</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +90 551 202 83 90</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> buraksazli0@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="buttonbottom" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
